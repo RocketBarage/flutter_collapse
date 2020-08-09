@@ -14,10 +14,13 @@ class Collapse extends StatelessWidget {
     ),
     this.value = true,
     this.body,
+    this.bg,
     this.onChange,
     this.showBorder = true,
     this.padding = const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
   }) : super(key: key);
+  
+  final Color bg;
 
   /// 标题
   final Widget title;
@@ -46,7 +49,7 @@ class Collapse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: bg,
       key: key,
       child: Column(
         children: <Widget>[
